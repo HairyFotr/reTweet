@@ -1,0 +1,4 @@
+Install https://github.com/sferik/t
+Run `t authorize --display-uri` to create and authorize App
+Run `populateUsedIds <groupName>` once to populate a list of old tweets
+Run `retweetNew <groupName>` periodically to retweet new tweets

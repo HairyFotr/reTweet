@@ -1,0 +1,4 @@
+# Note: Mentions and Retweets are filtered out with grep
+if [ -z $1 ]; then echo "Usage: getIds <twitterListName>"; exit; fi
+
+t list timeline --long $1 | tail -n +1 | grep -vP '  @[^ ]+ +(RT )?@' | cut -d' ' -f1

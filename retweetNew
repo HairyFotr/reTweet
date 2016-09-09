@@ -1,0 +1,3 @@
+if [ -z $1 ]; then echo "Usage: retweetNew <twitterListName>"; exit; fi
+
+for id in $(getIds $1); do grep -q $id .usedIds_$1 || { echo $id; t retweet $id && echo $id >> .usedIds_$1; }; done
